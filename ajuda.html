@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>FluoritaTrack | Dashboard</title>
+    <link rel="stylesheet" href="css/ajuda.css">
+    <link rel="shortcut icon" href="images/empresa/logo.png" type="image/x-png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="header-sidebar">
+            <img src="" alt="Foto de Perfil" id="fotoUsuario" class="fotoSec">
+            <h1>Dashboard</h1>
+            <a href=""><i class="ri-notification-2-fill"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dash.html"><i class="ri-dashboard-line"></i>Dashboard</a></li>
+                <hr>
+                <li><a href="alunos.html"><i class="ri-graduation-cap-line"></i>Alunos</a></li>
+                <li><a href="registrar-aula.html"><i class="ri-survey-line"></i>Registrar Aula</a></li>
+                <li><a href="aulas.html"><i class="ri-book-shelf-line"></i>Gerenciar Aulas</a></li>
+                <hr>
+                <li><a href="configuracoes.html"><i class="ri-settings-3-line"></i>Configuração</a></li>
+                <li><a href="index.html"><i class="ri-door-open-line"></i>Sair</a></li>
+                <li><a href="ajuda.html" class="active"><i class="ri-question-line"></i>Ajuda</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="content-header help-header">
+            <h1 class="help-title">O que podemos ajudar você?</h1>
+            
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <i class="ri-search-line search-icon"></i>
+                    <input 
+                        type="search" 
+                        class="help-search-input" 
+                        id="help-search" 
+                        placeholder="Buscar por tópico, função ou erro..."
+                        onkeyup="handleInput(event)" 
+                        onfocus="handleFocus()"
+                        onblur="handleBlur()"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div id="suggestions-box">
+                    </div>
+            </div>
+            
+            <div id="help-results-container">
+                <h3 id="result-title"></h3>
+                <div id="result-content" class="result-content">
+                    </div>
+            </div>
+        </header>
+        
+        <section class="help-cards-section">
+            <div class="card-grid">
+                
+                <div class="help-card" data-search-term="relatórios">
+                    <div class="card-icon card-icon-green"><i class="ri-ruler-line"></i></div>
+                    <span class="card-title">Exportação e Relatórios</span> 
+                </div>
+                
+                <div class="help-card" data-search-term="editar gerenciamento">
+                    <div class="card-icon card-icon-purple"><i class="ri-tools-line"></i></div>
+                    <span class="card-title">Edição e Gerenciamento</span> 
+                </div>
+                
+                <div class="help-card" data-search-term="frequência histórico">
+                    <div class="card-icon card-yellow"><i class="ri-line-chart-line"></i></div>
+                    <span class="card-title">Histórico e Presença</span>
+                </div>
+                
+                <div class="help-card" data-search-term="acesso senha">
+                    <div class="card-icon card-icon-orange"><i class="ri-lock-line"></i></div>
+                    <span class="card-title">Acesso e Senha</span>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="faq-footer">
+        <div class="faq-column">
+            <i class="ri-lightbulb-line icon-footer icon-yellow"></i>
+            <h4>Novo?</h4>
+            <p>Familiarize-se com os recursos em nossa 
+                <a href="docs/documento.pdf" target="_blank">Documentação Oficial</a>.
+            </p>
+        </div>
+        <div class="faq-column">
+            <i class="ri-lock-line icon-footer icon-orange"></i>
+            <h4>Gerenciar Acesso</h4>
+            <p>Recupere seu login perdido, gerencie seus dispositivos ou altere suas credenciais de acesso.</p>
+        </div>
+        <div class="faq-column">
+            <i class="ri-question-answer-line icon-footer icon-blue-light"></i> 
+            <h4>Não encontrou a resposta?</h4>
+            <p>Entre em contato diretamente com nossa equipe e responderemos em no máximo 24 horas úteis.</p>
+        </div>
+        </section>
+    </main>
+
+    <script src="js/ajuda.js"></script>
+</body>
+</html>

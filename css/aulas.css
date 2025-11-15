@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #003EC4;
+    --background-obj: #131435;
+    --color-text: #F1F2E1;
+    --color-details: #ff9d00;
+    --color-selection: #003ec485;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex; 
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #001E5E, var(--background-color)); 
+    color: var(--color-text);
+}
+
+.sidebar {
+    width: 300px;
+    background-color: var(--background-obj);
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.header-sidebar a {
+    text-decoration: none;
+}
+
+.header-sidebar h1 {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--color-details);
+}
+
+.header-sidebar a i {
+    font-size: 1.3em;
+    color: var(--color-details);
+    transition: color 0.2s;
+}
+
+.header-sidebar a:hover i {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav a i {
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.sidebar nav a:hover {
+    background-color: #272969;
+}
+
+.sidebar nav .active {
+    border-left: 5px solid var(--color-details);
+    font-weight: 600;
+}
+
+.sidebar nav hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-details);
+    margin: 20px 0;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.content-header h1 {
+    color: var(--color-details);
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.session-management-section {
+    background-color: var(--background-obj);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.session-management-section h2 {
+    font-size: 1.5em;
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-details);
+    padding-bottom: 10px;
+}
+
+.actions-bar {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.actions-bar .filter-bar {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+
+.filter-bar input, .filter-bar select {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-details);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1em;
+    flex: 1;
+}
+
+.filter-bar select option {
+    background-color: var(--background-obj);
+    color: var(--color-text);
+}
+
+.btn {
+    background-color: var(--color-details);
+    color: var(--background-obj);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-nova {
+    background-color: var(--color-details);
+    color: var(--background-obj);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+.btn i {
+    font-size: 1.2em;
+}
+
+.session-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.session-table th, .session-table td {
+    padding: 15px;
+    text-align: left;
+    color: var(--color-text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.session-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-details);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.session-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: var(--color-details);
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 5px 8px;
+    transition: color 0.3s ease;
+}
+
+.btn-icon:hover {
+    color: var(--color-text);
+}
+
+.status-tag {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 100px; 
+    text-align: center;
+    margin: 2px 0;
+    color: white; 
+}
+
+.status-tag.status-concluida { 
+    background-color: var(--color-success);
+}
+
+.status-tag.status-agendada { 
+    background-color: var(--color-info);
+}
+
+.status-tag.status-cancelada { 
+    background-color: var(--color-error);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--background-obj);
+    padding: 30px;
+    border: 1px solid var(--color-details);
+    width: 90%;
+    max-width: 550px; 
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.close-btn {
+    color: var(--color-text);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.2s;
+    position: absolute; 
+    top: 10px;
+    right: 20px;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: var(--color-error);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 { color: var(--color-details); margin-bottom: 20px; }
+.modal-content label { display: block; margin-top: 15px; margin-bottom: 5px; font-size: 0.9em; }
+
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-details);
+    background-color: var(--background-base, #100f2a); 
+    color: var(--color-text);
+    appearance: none;
+}
+
+.modal-actions { margin-top: 30px; text-align: right; }
+.modal-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: opacity 0.2s;
+}
+.modal-actions button:hover { opacity: 0.9; }
+.modal-actions .save-btn { background-color: var(--color-success); color: white; }
+.modal-actions .cancel-btn { background-color: var(--color-error); color: white; }
+
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-obj);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+.message-box p {
+    margin: 0 0 15px 0;
+}
+
+.message-box button {
+    background-color: var(--color-details);
+    color: var(--background-obj);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fotoSec {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-details);
+}

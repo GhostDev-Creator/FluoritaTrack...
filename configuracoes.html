@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>FluoritaTrack | Dashboard</title>
+    <link rel="stylesheet" href="css/configuracoes.css">
+    <link rel="shortcut icon" href="images/empresa/logo.png" type="image/x-png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="header-sidebar">
+            <img src="" alt="Foto de Perfil" id="fotoUsuario" class="fotoSec">
+            <h1>Configuração</h1>
+            <a href=""><i class="ri-notification-2-fill"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dash.html"><i class="ri-dashboard-line"></i>Dashboard</a></li>
+                <hr>
+                <li><a href="alunos.html"><i class="ri-graduation-cap-line"></i>Alunos</a></li>
+                <li><a href="registrar-aula.html"><i class="ri-survey-line"></i>Registrar Aula</a></li>
+                <li><a href="aulas.html"><i class="ri-book-shelf-line"></i>Gerenciar Aulas</a></li>
+                <hr>
+                <li><a href="configuracoes.html" class="active"><i class="ri-settings-3-line"></i>Configuração</a></li>
+                <li><a href="index.html"><i class="ri-door-open-line"></i>Sair</a></li>
+                <li><a href="ajuda.html"><i class="ri-question-line"></i>Ajuda</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <main class="content">
+            <header class="content-header">
+                <h1>Configurações</h1>
+            </header>
+
+            <section class="config-section">
+                <h2>Gerenciar Perfil</h2>
+                <div class="infoUsuario">
+                    <img src="https://via.placeholder.com/100/CCCCCC/FFFFFF?text=EU" class="current-profile-pic" id="profile-img"> 
+                    <div class="infoRapidas">
+                        <div class="botoesImg">
+                            <label for="upload-foto" class="upload-btn">
+                                <i class="ri-image-add-line"></i>Carregar Nova Foto
+                            </label>
+                            <input type="file" id="upload-foto" accept="image/*" style="display: none;"> 
+                            </div>
+                            <div class="botoesImg">
+                            <label for="remove-foto" class="remove-btn">
+                                <i class="ri-file-close-line"></i>Remover Foto
+                            </label>
+                            <input type="file" id="remove-foto" accept="image/*" style="display: none;"> 
+                        </div>
+                    </div>
+                    <div class="txtInfoRap">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+                    <div class="txtInfoRap">
+                        <label for="telefone">Telefone (Opcional)</label>
+                        <input type="tel" id="telefone" name="telefone" >
+                    </div>
+                </div>
+
+                <hr class="divisao">
+
+                <div class="infoAdd">
+                    <div class="txtInfoRap">
+                        <label for="email">E-mail</label>
+                        <div class="input-with-action">
+                            <input type="email" id="email" name="email" >
+                            <button type="button" class="action-btn" id="btnAlterarEmail">Alterar E-mail</button>
+                        </div>
+                    </div>
+                    <div class="infoPequenas">
+                        <div class="txtInfoRap">
+                            <label for="localizacao">Localização (Cidade/Estado)</label>
+                            <div>
+                                <input type="text" id="localizacao" name="localizacao">
+                            </div>
+                        </div>
+
+                        <div class="txtInfo">
+                            <label for="nascimento">Data de Nascimento (Opcional)</label>
+                            <div class="date">
+                                <input type="date" id="nascimento" name="nascimento" >
+                                <i class="ri-calendar-line date-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="details-button" id="salvarBtn">Salvar Alterações</button>
+                        <button type="button" class="cancel-button">Cancelar</button>
+                    </div>
+                    <p id="mensagem" style="margin-top: 15px; font-weight: bold;"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+</body>
+</html>

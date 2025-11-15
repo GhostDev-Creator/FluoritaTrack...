@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #003EC4;
+    --background-obj: #131435;  
+    --color-text: #F1F2E1;       
+    --color-details: #ff9d00;    
+    --color-selection: #003ec485;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex; 
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #001E5E, var(--background-color)); 
+    color: var(--color-text);
+}
+
+.sidebar {
+    width: 300px;
+    background-color: var(--background-obj);
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.header-sidebar a {
+    text-decoration: none;
+}
+
+.header-sidebar h1 {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--color-details);
+}
+
+.header-sidebar a i {
+    font-size: 1.3em;
+    color: var(--color-details);
+    transition: color 0.2s;
+}
+
+.header-sidebar a:hover i {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav a i {
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.sidebar nav a:hover {
+    background-color: #272969;
+}
+
+.sidebar nav .active {
+    border-left: 5px solid var(--color-details);
+    font-weight: 600;
+}
+
+.sidebar nav hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-details);
+    margin: 20px 0;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.content-header h1 {
+    color: var(--color-details);
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.class-registration-section {
+    background-color: var(--background-obj);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.class-registration-section h2, .class-registration-section h3 {
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.class-registration-section h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--color-details);
+}
+
+.class-registration-section h3 {
+    font-size: 1.3em;
+}
+
+.aula-details-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.form-group label {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.form-group input, .form-group select {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-details);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.form-group select option {
+    background-color: var(--background-obj);
+    color: var(--color-text);
+}
+
+.btn-secondary {
+    background-color: var(--background-obj);
+    color: var(--color-details);
+    border: 1px solid var(--color-details);
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-details);
+    color: var(--background-obj);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table thead {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.data-table th, .data-table td {
+    padding: 15px;
+    text-align: left;
+    color: var(--color-text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-table th {
+    color: var(--color-details);
+    font-weight: bold;
+}
+
+.data-table td:first-child {
+    font-weight: bold;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.attendance-table input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-details);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.attendance-table input[type="checkbox"]:checked {
+    background-color: var(--color-details);
+}
+
+.attendance-table input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--background-obj);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.observation-input {
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--color-details);
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mt-4 {
+    margin-top: 20px;
+}
+
+.date-input-wrapper {
+    position: relative;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.date-input-wrapper input[type="date"] {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-details);
+    padding: 10px 30px 10px 10px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.date-input-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.date-icon {
+    position: absolute;
+    top: 50%; 
+    right: 8px;
+    transform: translateY(-50%);
+    font-size: 1.1em;
+    pointer-events: none;
+    color: var(--color-details); 
+    z-index: 1; 
+}
+.date-input-wrapper label + input[type="date"] + .date-icon {
+    top: calc(50% + 14px);
+}
+
+.fotoSec {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-details);
+}
+
+.auxilio-botao {
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.presente {
+    color: #10b981;
+}
+
+.ausente {
+    color: #ef4444;
+}
+
+#mark-all-button {
+    background-color: transparent;
+    color: var(--color-details);
+    border: 2px solid var(--color-details);
+    margin-top: 10px;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#mark-all-button:hover {
+    background-color: var(--color-details);
+    color: var(--background-obj);
+}
+
+.data-table textarea {
+    width: 200px;
+    height: 60px;
+    padding: 8px;
+    border: 1px solid var(--color-details);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    transition: border-color 0.3s;
+    background-color: var(--background-obj);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.data-table textarea:focus {
+    border-color: var(--color-details);
+    outline: none;
+}
+
+.data-table textarea::placeholder {
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.botao-right-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.action-button {
+    background-color: transparent;
+    color: var(--color-details);
+    border: 2px solid var(--color-details);
+    margin-top: 10px;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: var(--color-details);
+    color: var(--background-obj);
+}
+
+.botao-center-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}

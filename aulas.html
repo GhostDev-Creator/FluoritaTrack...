@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>FluoritaTrack | Dashboard</title>
+    <link rel="stylesheet" href="css/aulas.css">
+    <link rel="shortcut icon" href="images/empresa/logo.png" type="image/x-png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="header-sidebar">
+            <img src="" alt="Foto de Perfil" id="fotoUsuario" class="fotoSec">
+            <h1>Gerenciar Aulas</h1>
+            <a href=""><i class="ri-notification-2-fill"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dash.html"><i class="ri-dashboard-line"></i>Dashboard</a></li>
+                <hr>
+                <li><a href="alunos.html"><i class="ri-graduation-cap-line"></i>Alunos</a></li>
+                <li><a href="registrar-aula.html"><i class="ri-survey-line"></i>Registrar Aula</a></li>
+                <li><a href="aulas.html" class="active"><i class="ri-book-shelf-line"></i>Gerenciar Aulas</a></li>
+                <hr>
+                <li><a href="configuracoes.html"><i class="ri-settings-3-line"></i>Configuração</a></li>
+                <li><a href="index.html"><i class="ri-door-open-line"></i>Sair</a></li>
+                <li><a href="ajuda.html"><i class="ri-question-line"></i>Ajuda</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="content-header">
+            <h1>Gerenciar Aulas</h1>
+        </header>
+
+        <section class="session-management-section">
+            <h2>Lista de Aulas</h2>
+            <div class="actions-bar">
+                <a href="registrar-aula.html" class="btn-nova">
+                    <i class="ri-add-line"></i> Nova Aula
+                </a>
+                <div class="filter-bar">
+                    <input type="text" id="filter-text" placeholder="Pesquisar disciplina/professor...">
+                    <select id="turma-filter-aulas">
+                        <option value="">Filtrar por Turma</option>
+                        </select>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table class="data-table session-table">
+                    <thead>
+                        <tr>
+                            <th>Turma</th>
+                            <th>Data</th>
+                            <th>Disciplina</th>
+                            <th>Professor</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="aulas-table-body">
+                        <tr><td colspan="6" style="text-align: center; padding: 2rem;">Carregando dados...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('editModal')">&times;</span>
+            <h2 id="edit-modal-title">Editar Aula</h2>
+            
+            <input type="hidden" id="edit-aula-id">
+            
+            <label for="edit-turma">Turma:</label>
+            <select id="edit-turma">
+                </select>
+            
+            <label for="edit-disciplina">Disciplina:</label>
+            <input type="text" id="edit-disciplina">
+            
+            <label for="edit-professor">Professor:</label>
+            <input type="text" id="edit-professor">
+            
+            <label for="edit-data">Data:</label>
+            <input type="date" id="edit-data">
+            
+            <label for="edit-status">Status:</label>
+            <select id="edit-status">
+                <option value="Concluída">Concluída</option>
+                <option value="Agendada">Agendada</option>
+                <option value="Cancelada">Cancelada</option>
+            </select>
+            
+            <div class="modal-actions">
+                <button class="cancel-btn" onclick="closeModal('editModal')">Cancelar</button>
+                <button class="save-btn" onclick="saveAula()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="viewModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close-btn" onclick="closeModal('viewModal')">&times;</span>
+            <h2 id="view-aula-title">Frequência da Aula</h2>
+            
+            <p>Turma: <strong id="view-turma"></strong></p>
+            <p>Disciplina: <strong id="view-disciplina"></strong></p>
+            <p>Data: <strong id="view-data"></strong></p>
+            <p>Professor: <strong id="view-professor"></strong></p>
+            
+            <hr style="margin: 15px 0; border-color: rgba(255, 255, 255, 0.1);">
+
+            <h3>Lista de Presença:</h3>
+            <div id="visualizar-frequencia-body">
+                <table class="data-table" style="margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th>Matrícula</th>
+                            <th>Nome do Aluno</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="frequencia-list">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="modal-actions" style="text-align: center;">
+                <button class="cancel-btn" onclick="closeModal('viewModal')">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/alunos.js"></script>
+    <script src="js/chart-aulas.js"></script>
+</body>
+</html>

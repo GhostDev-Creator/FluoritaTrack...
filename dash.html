@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>FluoritaTrack | Dashboard</title>
+    <link rel="stylesheet" href="css/dash.css">
+    <link rel="shortcut icon" href="images/empresa/logo.png" type="image/x-png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="header-sidebar">
+            <img src="" alt="Foto de Perfil" id="fotoUsuario" class="fotoSec">
+            <h1>Dashboard</h1>
+            <a href=""><i class="ri-notification-2-fill"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dash.html" class="active"><i class="ri-dashboard-line"></i>Dashboard</a></li>
+                <hr>
+                <li><a href="alunos.html"><i class="ri-graduation-cap-line"></i>Alunos</a></li>
+                <li><a href="registrar-aula.html"><i class="ri-survey-line"></i>Registrar Aula</a></li>
+                <li><a href="aulas.html"><i class="ri-book-shelf-line"></i>Gerenciar Aulas</a></li>
+                <hr>
+                <li><a href="configuracoes.html"><i class="ri-settings-3-line"></i>Configuração</a></li>
+                <li><a href="index.html"><i class="ri-door-open-line"></i>Sair</a></li>
+                <li><a href="ajuda.html"><i class="ri-question-line"></i>Ajuda</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="container" id="areaDeImpressao">
+        
+        <header class="content-header">
+            <div class="classroom-info">
+                <select id="turma-filter-dashboard">
+                    <option value="">Filtrar por Turma</option>
+                </select>
+                <input type="text" id="search-aluno" placeholder="Buscar Aluno..." class="search-input">
+                
+                <div class="date-range">
+                    <label for="date-start-dashboard" class="do">Do dia:</label>
+                    <div class="date-input-wrapper">
+                        <input type="date" id="date-start-dashboard"> <i class="ri-calendar-line date-icon"></i>
+                    </div>
+                    <label for="date-end-dashboard" class="ate">Até dia:</label>
+                    <div class="date-input-wrapper">
+                        <input type="date" id="date-end-dashboard"> <i class="ri-calendar-line date-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="filter-actions-group">
+                    <button id="apply-filters-btn" class="action-button primary-btn">
+                        Aplicar Filtro
+                    </button>
+                    <button id="clear-filters-btn" class="action-button secondary-btn">
+                        Limpar
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-info">
+                <div class="total-faults">
+                    <span class="label">Total de faltas</span><br>
+                    <span id="totalFaults" class="number">--</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="analysis-section">
+            <h2>Análise</h2>
+            <div class="analysis-content">
+                <div class="chart-summary">
+                    <div class="chart-container"> 
+                        <canvas id="frequenciaChart"></canvas>
+                        
+                        <div id="chart-center-text"> 
+                            <p id="chart-center-percent">--%</p>
+                            <p id="chart-center-faltas">(0 Faltas)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-cards-container">
+                    <div class="info-card">
+                        <h3>Faltas Justificadas</h3>
+                        <p id="justifiedAbsencesCount">--</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Sem Justificativas</h3>
+                        <p id="unjustifiedAbsencesCount">--</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Atrasados</h3>
+                        <p id="lateCount">--</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Em revisão</h3>
+                        <p id="emRevisaoCount">--</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn-secondary" onclick="exportar()">Exportar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="student-list-section">
+            <h2>Lista de Alunos</h2>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Nº</th>
+                            <th>Aluno</th>
+                            <th class="text-center">Sala</th>
+                            <th class="text-center">Aulas Totais</th>
+                            <th class="text-center">Faltas</th>
+                            <th class="text-center">Frequência</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alunos-table-body">
+                        <tr><td colspan="6" class="text-center py-4">Carregando dados...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="js/dash.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function exportar() {
+            window.print(); 
+        }
+    </script>
+</body>
+</html>

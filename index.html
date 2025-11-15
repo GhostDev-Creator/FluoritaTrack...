@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>FluoritaTrack | Login </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/empresa/logo.png" type="image/x-png">
+</head>
+<body>
+    <div class="banner-left">
+        <div class="logo-banner">
+            <img src="images/empresa/logo.png" alt="Logo FluoritaTrack">
+        </div>
+        <div class="text-titulo">
+            <h1>FLUORITATRACK GESTÃO INTELIGENTE</h1>
+        </div>
+        <div class="text-subtitulo">
+            <h1>O PAINEL COLABORATIVO PARA ADMINISTRAÇÃO ESCOLAR E EDUCADORES.</h1>
+        </div>
+        <div class="text-destaque">
+            <h1>Frequência na palma da mão. Relatórios a um clique. Decisões baseadas em dados.</h1>
+        </div>  
+        <div class="text-footer">
+            <h1>O FUTURO DA GESTÃO DE PRESENÇA NAS INSTITUIÇÕES DE ENSINO.</h1>
+        </div>
+    </div>
+
+    <div class="login-screen">
+        <div class="register">
+            <p>Não tem uma conta?</p>
+            <a href="register.html">CRIAR CONTA</a>
+        </div>
+
+        <div class="login">
+            <div class="text-login">
+                <h1>Acessar FluoritaTrack.</h1>
+                <h2>insira seus dados abaixo.</h2>
+            </div>
+            
+            <div class="formulario">
+                <form id="formulario">
+                    <label for="mf">MATRÍCULA FUNCIONAL</label> 
+                    <input type="text" id="mf" name="mf" placeholder="Matrícula Funcional (ex: 123456)" maxlength="14" required>
+
+                    <a href="senha.html" id="esqueceuSenha">Esqueceu sua senha?</a>
+
+                    <label for="senha">SENHA</label>
+                    <div class="input-container"> 
+                        <input type="password" id="senha" name="senha" required>
+                        <div class="toggle-password-icons" data-target="senha"> 
+                            <i class="ri-eye-line visible" data-action="show"></i> 
+                            <i class="ri-eye-off-line hidden" data-action="hide"></i> 
+                        </div>
+                    </div>
+                    
+                    <button type="submit" id="entrar">ENTRAR</button>
+                </form>
+                <p id="mensagem" style="margin-top: 15px; font-weight: bold;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

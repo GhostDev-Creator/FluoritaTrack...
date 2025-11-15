@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>FluoritaTrack | Chamada</title>
+    <link rel="stylesheet" href="css/registrar-aula.css">
+    <link rel="shortcut icon" href="images/empresa/logo.png" type="image/x-png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="header-sidebar">
+            <img src="" alt="Foto de Perfil" id="fotoUsuario" class="fotoSec">
+            <h1>Registrar Aula</h1>
+            <a href=""><i class="ri-notification-2-fill"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dash.html"><i class="ri-dashboard-line"></i>Dashboard</a></li>
+                <hr>
+                <li><a href="alunos.html"><i class="ri-graduation-cap-line"></i>Alunos</a></li>
+                <li><a href="registrar-aula.html" class="active"><i class="ri-survey-line"></i>Registrar Aula</a></li>
+                <li><a href="aulas.html"><i class="ri-book-shelf-line"></i>Gerenciar Aulas</a></li>
+                <hr>
+                <li><a href="configuracoes.html"><i class="ri-settings-3-line"></i>Configuração</a></li>
+                <li><a href="index.html"><i class="ri-door-open-line"></i>Sair</a></li>
+                <li><a href="ajuda.html"><i class="ri-question-line"></i>Ajuda</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+     <main class="content">
+        <header class="content-header">
+            <h1>Registrar Frequência da Aula</h1>
+        </header>
+
+        <section class="class-registration-section">
+            <h2>Detalhes da Aula</h2>
+            
+            <div class="aula-details-form">
+                <div class="form-group">
+                    <label for="turma-filter-alunos">Turma (Filtro):</label> 
+                    <select id="turma-filter-alunos" required> 
+                        <option value="">Todas as Turmas</option> 
+                    </select>
+                </div>
+                
+                <div class="date-input-wrapper form-group">
+                    <label for="date-from">Data da Aula:</label>
+                    <input type="date" id="date-from">
+                    <i class="ri-calendar-line date-icon"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="disciplina">Disciplina:</label>
+                    <input type="text" id="disciplina" placeholder="Ex: Matemática" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="classes-count">Nº de Aulas</label>
+                    <input type="number" id="classes-count" value="1" min="1" required>
+                </div>
+            </div>
+
+            <h3 class="mt-4">Lista de Chamada</h3>
+            
+            <div class="registro-header">
+                <p class="auxilio-botao">Marque <strong class="presente">Presente</strong> (Botão com o Visto) ou <strong class="ausente">Ausente</strong> (Botão vazio).</p>
+            </div>
+            
+            <div style="overflow-x: auto;">
+                <table class="data-table attendance-table" id="registro-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">Nº</th>
+                            <th>Nome do Aluno</th>
+                            <th style="width: 200px; text-align: center;">Sala</th>
+                            <th style="width: 120px; text-align: center;">Presença</th>
+                            <th style="width: 150px;">Observações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registro-table-body"> 
+                        <tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--color-text);">Carregando dados...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="botao-right-container">
+                <button id="save-frequency-btn" class="action-button">Registrar Aula(s)</button>
+            </div>
+
+            <div class="botao-center-container">
+                <p id="registro-feedback" class="mensagemAlerta"></p>
+            </div>
+        </section>
+    </main>
+    <script src="js/registrar-aula.js"></script> 
+    <script src="js/chart-registrar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

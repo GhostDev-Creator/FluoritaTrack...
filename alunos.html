@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>FluoritaTrack | Dados - Alunos</title>
+    <link rel="stylesheet" href="css/alunos.css">
+    <link rel="shortcut icon" href="images/empresa/logo.png" type="image/x-png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="header-sidebar">
+            <img src="" alt="Foto de Perfil" id="fotoUsuario" class="fotoSec">
+            <h1>Alunos</h1>
+            <a href=""><i class="ri-notification-2-fill"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dash.html"><i class="ri-dashboard-line"></i>Dashboard</a></li>
+                <hr>
+                <li><a href="alunos.html" class="active"><i class="ri-graduation-cap-line"></i>Alunos</a></li>
+                <li><a href="registrar-aula.html"><i class="ri-survey-line"></i>Registrar Aula</a></li>
+                <li><a href="aulas.html"><i class="ri-book-shelf-line"></i>Gerenciar Aulas</a></li>
+                <hr>
+                <li><a href="configuracoes.html"><i class="ri-settings-3-line"></i>Configuração</a></li>
+                <li><a href="index.html"><i class="ri-door-open-line"></i>Sair</a></li>
+                <li><a href="ajuda.html"><i class="ri-question-line"></i>Ajuda</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="content-header">
+            <h1>Alunos</h1>
+            <div class="user-info">
+                <select id="status-filter"> 
+                    <option value="">Filtrar por Status</option>
+                    <option value="Ativo">Ativo</option>
+                    <option value="Transferido">Transferido</option>
+                    <option value="Atestado">Afastado</option> <option value="Inativo">Inativo</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="data-section">
+            <h2>Lista de Alunos</h2>
+            <div class="filter-bar">
+                <input type="text" id="name-filter" placeholder="Pesquisar aluno...">
+                
+                <select id="turma-filter"> 
+                    <option value="">Filtrar por Turma</option>
+                </select>
+            </div>
+            
+            <div style="overflow-x: auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Status</th> 
+                            <th>Nome</th>
+                            <th>Matrícula</th>
+                            <th>Turma</th>
+                            <th>Frequência (%)</th>
+                            </tr>
+                    </thead>
+                    <tbody id="alunos-table-body">
+                        <tr><td colspan="5" style="text-align: center; padding: 2rem;">Carregando dados...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="results-summary" style="margin-top: 15px; font-size: 0.9em;"></p>
+        </section>
+    </main>
+
+    <script src="js/alunos.js"></script>
+    <script src="js/chart-alunos.js"></script>
+</body>
+</html>

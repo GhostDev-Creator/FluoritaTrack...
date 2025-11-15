@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #003EC4;
+    --background-obj: #131435;
+    --color-text: #F1F2E1;
+    --color-details: #ff9d00;
+    --color-selection: #003ec485;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    display: flex; 
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #001E5E, var(--background-color)); 
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 0.8rem;
+}
+
+.banner-left {
+    background-color: var(--background-obj);
+    color: var(--color-text);
+    width: 30%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    gap: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+}
+
+.logo-banner img {
+    max-width: 75px;
+    height: auto;
+    align-self: flex-start; 
+}
+
+.text-titulo h1 {
+    font-size: 0.7rem;
+    line-height: 1;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 130px;
+}
+
+.text-subtitulo h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-destaque h1 {
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: 400; 
+    color: var(--color-details);
+}
+
+.text-footer {
+    margin-top: auto; 
+}
+
+.text-footer h1 {
+    font-size: 0.6rem;
+    font-weight: 500;
+    opacity: 0.65;
+    text-align: center;
+}
+
+.login-screen {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.register {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+.register p {
+    display: inline-block;
+    color: var(--color-text);
+    margin-right: 10px;
+    font-size: 0.7rem;
+}
+
+.register a {
+    text-decoration: none;
+    color: var(--color-details);
+    font-weight: 700;
+    padding: 8px 15px;
+    border: 2px solid var(--color-details);
+    border-radius: 5px;
+    transition: background-color 0.45s;
+    font-size: 0.7rem;
+}
+
+.register a:hover {
+    background-color: var(--color-details);
+    color: var(--background-obj);
+}
+
+.login {
+    width: 75%;
+    max-width: 800px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: var(--background-obj);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+}
+
+.text-login h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-details);
+    margin-bottom: 5px;
+}
+
+.text-login h2 {
+    font-size: 0.8rem;
+    color: var(--color-details);
+    margin-bottom: 30px;
+}
+
+.formulario {
+    width: 100%;
+}
+
+.formulario label {
+    display: block;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.formulario input:focus {
+    border-color: var(--color-details);
+    outline: none;
+}
+
+.formulario input::placeholder {
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.formulario button#esqueceuSenha {
+    background: none;
+    border: none;
+    color: var(--color-details);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 0;
+    float: right;
+    transition: color 0.45s;
+}
+
+.formulario button#esqueceuSenha:hover {
+    text-decoration: underline;
+}
+
+.formulario button#criar {
+    width: 100%;
+    background-color: var(--color-details);
+    color: var(--background-obj);
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #e68a00;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.45s;
+}
+
+.formulario button#criar:hover {
+    background-color: #e68a00;
+}
+
+#mensagem {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.input-container {
+    position: relative; 
+    margin-bottom: 15px; 
+}
+
+.toggle-password-icons {
+    position: absolute;
+    top: 25%; 
+    right: 35px; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+    user-select: none; 
+    font-size: 1.1rem;
+    color: var(--color-details);
+    z-index: 10;
+}
+
+.toggle-password-icons i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s;
+}
+
+.toggle-password-icons .visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toggle-password-icons .hidden {
+    opacity: 0;
+    pointer-events: none;
+}
