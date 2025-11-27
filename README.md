@@ -1,62 +1,72 @@
-FluoritaTrack
+# **FluoritaTrack**
 
-O FluoritaTrack é uma plataforma robusta e intuitiva desenvolvida para o gerenciamento de frequência escolar. Seu objetivo é simplificar o modo como educadores e administradores monitoram a presença dos alunos, oferecendo uma solução prática, eficiente e visual para registrar, analisar e acompanhar faltas e presenças.
+O **FluoritaTrack** é uma plataforma robusta e intuitiva desenvolvida para o gerenciamento de frequência escolar. Seu objetivo é simplificar o modo como educadores e administradores monitoram a presença dos alunos, oferecendo uma solução prática, eficiente e visual para registrar, analisar e acompanhar faltas e presenças.
 
-✨ Recursos Principais
+---
 
-Dashboard Interativo
-Uma visão geral completa das métricas de frequência, exibindo total de faltas, porcentagem de presença e um resumo das justificativas.
+## ✨ **Recursos Principais**
 
-Análise Detalhada
-Gráficos e dados visuais que permitem uma análise rápida da presença dos alunos.
+- **Dashboard Interativo**  
+  Uma visão geral completa das métricas de frequência, exibindo total de faltas, porcentagem de presença e um resumo das justificativas.
 
-Gerenciamento de Alunos e Aulas
-Funções para registrar novas aulas, editar informações de alunos e consultar o histórico de presença individual.
+- **Análise Detalhada**  
+  Gráficos e dados visuais que permitem uma análise rápida da presença dos alunos.
 
-Filtros e Exportação
-Filtre dados por turma ou período e exporte relatórios para análises externas.
+- **Gerenciamento de Alunos e Aulas**  
+  Funções para registrar novas aulas, editar informações de alunos e consultar o histórico de presença individual.
 
-Notificações e Status
-Acompanhe o status de cada falta: justificada, sem justificativa ou atraso.
+- **Filtros e Exportação**  
+  Filtre dados por turma ou período e exporte relatórios para análises externas.
 
-🚀 Como Usar
+- **Notificações e Status**  
+  Acompanhe o status de cada falta: **justificada**, **sem justificativa** ou **atraso**.
 
-Acesse o Dashboard
-O painel principal apresenta um resumo completo da frequência dos alunos.
+---
 
-Filtre por Turma ou Data
-Utilize os filtros no topo da página para visualizar apenas os dados desejados.
+## 🚀 **Como Usar**
 
-Registre Aulas
-Acesse a seção "Registrar Aula" para registrar presenças e faltas.
+1. **Acesse o Dashboard**  
+   O painel principal apresenta um resumo completo da frequência dos alunos.
 
-Visualize a Lista de Alunos
-Na parte inferior do dashboard, consulte a tabela com as frequências individuais.
-Clique em "detalhes" para acessar informações completas do aluno.
+2. **Filtre por Turma ou Data**  
+   Utilize os filtros no topo da página para visualizar apenas os dados desejados.
 
-🌐 Acesso ao Projeto Publicado
+3. **Registre Aulas**  
+   Acesse a seção **"Registrar Aula"** para registrar presenças e faltas.
+
+4. **Visualize a Lista de Alunos**  
+   Na parte inferior do dashboard, consulte a tabela com as frequências individuais.  
+   Clique em **"detalhes"** para acessar informações completas do aluno.
+
+---
+
+## 🌐 **Acesso ao Projeto Publicado**
 
 O projeto está disponível publicamente via GitHub Pages:
 
-🔗 Acesse aqui:
+🔗 **Acesse aqui:**  
 https://ghostdev-creator.github.io/FluoritaTrack/
 
-🛠️ Tecnologias Utilizadas
+---
 
-HTML5 – Estrutura do sistema.
+## 🛠️ **Tecnologias Utilizadas**
 
-CSS3 – Estilos e interface, incluindo ícones da biblioteca Remixicon.
+- **HTML5** – Estrutura do sistema.  
+- **CSS3** – Estilos e interface, incluindo ícones da biblioteca *Remixicon*.  
+- **JavaScript** – Lógica do dashboard, manipulação e exibição dos dados.
 
-JavaScript – Lógica do dashboard, manipulação e exibição dos dados.
+---
 
-🔒 Licença
+## 🔒 **Licença**
 
-Este projeto foi desenvolvido como parte do Trabalho de Conclusão da matéria de Projeto do curso técnico.
-O código-fonte é de propriedade dos alunos desenvolvedores e não pode ser copiado, distribuído ou usado comercialmente sem autorização.
+Este projeto foi desenvolvido como parte do Trabalho de Conclusão da matéria de **Projeto** do curso técnico.  
+O código-fonte é de propriedade dos alunos desenvolvedores e **não pode ser copiado, distribuído ou usado comercialmente sem autorização**.
 
-Todos os direitos reservados.
+**Todos os direitos reservados.**
 
-👨‍💻 Desenvolvedores
+---
+
+## 👨‍💻 **Desenvolvedores**
 
 Laura Lopes 
 João Guilherme
