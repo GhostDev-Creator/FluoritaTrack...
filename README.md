@@ -45,7 +45,7 @@ O **FluoritaTrack** é uma plataforma robusta e intuitiva desenvolvida para o ge
 O projeto está disponível publicamente via GitHub Pages:
 
 🔗 **Acesse aqui:**  
-https://ghostdev-creator.github.io/FluoritaTrack/
+https://ghostdev-creator.github.io/FluoritaTrack.../
 
 ---
 
